@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Omrails</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
 
-<%= yield %>
+	  <title>Robbie's OMrails site</title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
 
-</body>
+	</head>
+
+	<body>
+	<%= render 'layouts/header' %>
+
+	<div class= "container">
+		<%= yield %>
+		<%= render 'layouts/footer' %>
+	</div>
+
+	</body>
 </html>
